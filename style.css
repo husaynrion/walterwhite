@@ -1,226 +1,118 @@
-
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400');
-/* RESET STYLE */
-
 *{
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-
-
+.flex{
+    display: flex;
+}
 body{
-    margin: 0 auto;
-    min-height: 100%;
-    font-family: 'Titillium Web', Tahoma, sans-serif, monospace;
     height: 100vh;
     width: 100%;
-    padding:0;
-    background-image: url("webBG.jpg");
+    background-image: url(bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
 }
-nav {
-    z-index: 9999;
-    position: relative;
-    top: 0;
+.header{
+    padding: 20px 0px;
     width: 100%;
+    background-color: rgba(0,0,0,.3);
 }
-
-
-
-.nav {
-    z-index: 2;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    background-color: transparent;
-    display: none;
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .1);
-    position: relative;
-    top: -4px;
-}
-
-
-ul a {
-    text-align: center;
-    display: inline-block;
-    color: rgb(247, 247, 247);
-    padding: 20px 30px;
-    font-size: 18px;
-    border-top: 1px #BDC3C7 solid;
-    text-decoration:none;
-}
-ul a:hover {
-    background-color: #fbfc70;
-    color: rgb(0, 0, 0);
-}
-#nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        top: 0;
-    }
-
-/* ANIMATION */
-
-
-/* card */
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-}
-#card{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0 0 20px 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 300px;
-    padding-bottom: 15px;
-    background-color: white;
-    transform: translate(-50%,-50%);
-    top:50%;
-    left: 50%;
-    opacity: 0.0;
-}
-
-#card img{
-    background-color: rgba(189, 189, 189, 0.1);
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px 2px rgba(218, 218, 218, 0.4);
-    padding: 5px;
-    margin-top: -70px;
-}
-
-#card h2{
-    margin: 10px 0;
-    letter-spacing: 1px;
-    word-spacing: 5px;
-}
-
-.cont{
-    width: 90%;
-    height: 0;
-    overflow: hidden;
-    text-align: center;
-    transition: all 0.6s ease;
-    line-height: 1.6;
-}
-#card .cont .link {
-    margin: 10px 0px;
-}
-#card .cont .link a{
-    margin: 0px 15px;
-}
-#card .cont .link i{
-    font-size: 35px;
-    color: rgb(82, 82, 82);
-    transition: all 0.2s ease;
-}
-
-#card .cont .link i:hover{
-    cursor: pointer;
-}
-#card .cont .link .fa-facebook:hover{
-    color: #4267B2;
-}
-#card .cont .link .fa-github:hover{
-    color: #1b1b1b;
-}
-#card:hover > .cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    height: 230px;
-}
-
-#card:hover > .link{
+.header .img{
     width: 40%;
-    display: flex;
-    justify-content: space-between;
+}
+.header .img img{
+  transform: scale(1.2);
+  transition: all 1s linear;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 5px black;
+}
+.header .img img:hover{
+  transform: scale(1.5);
+  box-shadow: 0px 0px 6px 4px #31f90d;
+}
+.menu{
+    width: 60%;
+}
+.menu ul li{
+    list-style: none;
+    float: left;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    margin: 2px 2px;
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+.menu ul li:hover{
+    background-color: rgb(2, 197, 44);
+}
+.title{
+    height: 500px;
+}
+.title .text{
+    height: 47%;
+    border-left: 3px solid white;
+    margin-left: 10%;
+    padding-left: 5%;
+    padding-bottom: 0px;
 }
 
-.anim{
-    -webkit-animation: 1700ms gayeb ease-out forwards;
-    animation: 1700ms gayeb ease-out forwards;
+.title .text h3{
+    font-size: 20px;
 }
+.title .text h2{
+    font-size: 50px;
+}
+.title .text button{
+    font-weight: bold;
+    border: none;
+    background-color: rgb(25, 134, 58);
+    color: white;
+    padding: 6px 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+.title .text button:hover{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+}
+.jumbotron h5{
+    font-weight: bold;
+}
+.likings img{
+    margin-bottom: -23px;
+}
+.likings h6{
+    font-weight: 500;
+}
+.likings span{
+    color: rgb(6, 168, 60);
+    font-size: 21px;
+}
+.likings .btn:hover{
+    background-color: rgb(58, 248, 121);
+}
+.likings .card:hover span{
+    color: rgb(58, 248, 121);
+}
+.likings .card:hover{
+    box-shadow: 0px 4px 10px 1px rgb(83, 83, 83);
+}
+/*serious*/
 
-@-webkit-keyframes gayeb {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.serious .left{
+    padding-left:7%;
 }
-
-@keyframes gayeb {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.anim2{
-    -webkit-animation: 700ms udvut ease-out forwards;
-    animation: 700ms udvut ease-out forwards;
-}
-
-@-webkit-keyframes udvut {
-    0%{
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes udvut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#about{
-    -webkit-animation: tiptup 2s infinite;
-    animation: tiptup 2s infinite;
-}
-@-webkit-keyframes tiptup {
-    0%{
-        background-color: transparent;
-    }
-    50%{
-        background-color: #fcfc705e;
-    }
-    100% {
-        background-color: transparent;
-    }
-}
-
-@keyframes tiptup {
-    0%{
-        background-color: transparent;
-    }
-    50%{
-        background-color: #fcfc705e;
-    }
-    100% {
-        background-color: transparent;
-    }
+.serious .left span,.right span{
+    font-size: 25px;
+    background-color: rgb(6, 168, 60);
 }
